@@ -8,6 +8,7 @@ function setTextColor(theme) {
   } else {
     textColor = "white";
   }
+    updateClock();
 }
 
 // Set the element style when the extension page loads
@@ -38,29 +39,22 @@ function updateClock() {
         } else if (hours === 0) {
             hours = 12;
         };
-        //if(hours == 0){
-       //     hours = 12;
-       // } else {
-       //     hours = hours % 12;
-       // }
-        
-  //var minutes=  date.getMinutes();
+       
 
   var canvas = document.createElement("canvas");
   var context = canvas.getContext("2d");
   context.fillStyle = textColor;
   context.font = "bold 100px sans-serif";
   context.fillText(hours +":", 0, 100);
-  //context.font = "62px sans-serif";
-  //context.fillText((minutes<10? "0": "") + minutes, 60, 110);
+  
 
   var imageData = context.getImageData(0, 0, 128, 128);
 
   browser.browserAction.setIcon({imageData: imageData});
   browser.browserAction.setTitle({title: date.toString()});
 setTimeout(updateClock, (60-date.getSeconds())*1000);
-  //setTimeout(update, (60-date.getSeconds())*1000);
+ 
 }
-//I think that it doesn't update because it should be setTimeout(updateClock	
+
 		updateClock();
 	
