@@ -20,9 +20,4 @@ function restoreOptions() {
 }
 
 document.addEventListener("DOMContentLoaded", restoreOptions);
-//document.querySelector("form").addEventListener("submit", saveOptions);
-document.addEventListener('change', function() {
-    browser.storage.sync.set({
-        color: document.querySelector('#color').value
-    });
-});
+document.querySelector("form").addEventListener("submit", saveOptions);
