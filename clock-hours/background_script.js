@@ -30,7 +30,7 @@ browser.theme.onUpdated.addListener(async ({ theme, windowId }) => {
     setTextColor(theme);
   }
 });
-
+// so I think I need to move the color stuff to options.js so step one would be to move this and then use browser.storage.sync.get to retrieve the color
 function updateClock() {
 		var date = new Date();
 		var hours = date.getHours();
