@@ -30,7 +30,7 @@ browser.theme.onUpdated.addListener(async ({ theme, windowId }) => {
     setTextColor(theme);
   }
 });
-// so I think I need to move the color stuff to options.js so step one would be to move this and then use browser.storage.sync.get to retrieve the color
+// so I think I need to move the color stuff to options.js so step one would be to move this and then use browser.storage.sync.get to retrieve the color. maybe not. in options use a radio button and if checked store the value as true then do an if else here if value = true then get the color else then go with the color picked in the color picker. 
 function updateClock() {
 		var date = new Date();
 		var hours = date.getHours();
