@@ -27,14 +27,14 @@ document.addEventListener('change', function() {
     });
 });
 //testing this stuff out
-function isGreen() {
-    browser.storage.sync.set({
-    green: true
-  });
-}
+//function isGreen() {
+ //   browser.storage.sync.set({
+ //   green: true
+ // });
+//}
 
-function isBlue() {
-    browser.storage.sync.set({
-    green: false
-  });
-}
+//function isBlue() {
+//    browser.storage.sync.set({
+//    green: false
+//  });
+//}
