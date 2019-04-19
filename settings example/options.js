@@ -26,3 +26,15 @@ document.addEventListener('change', function() {
         color: document.querySelector('#color').value
     });
 });
+//testing this stuff out
+function isGreen() {
+    browser.storage.sync.set({
+    green: true
+  });
+}
+
+function isBlue() {
+    browser.storage.sync.set({
+    green: false
+  });
+}
