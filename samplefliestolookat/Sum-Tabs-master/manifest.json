@@ -1,0 +1,23 @@
+{
+
+  "manifest_version": 2,
+  "name": "Sum Tabs",
+  "version": "1.0",
+
+  "default_locale": "en",
+
+  "description": "Adds a button with the number of tabs to your toolbar",
+
+  "icons": {
+    "128": "icon/sum-tabs-icon.svg"
+  },
+
+  "browser_action": {
+    "default_icon": "icon/sum-tabs-icon.svg",
+    "default_popup": "popup/sum_tabs.html"
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
